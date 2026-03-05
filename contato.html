@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- ============================= -->
+  <!-- META / SEO -->
+  <!-- ============================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a MusicBox.">
+
+  <title>MusicBox | Contato</title>
+
+  <!-- ============================= -->
+  <!-- FAVICON -->
+  <!-- ============================= -->
+  <link rel="icon" href="assets/img/logo/favicon.png">
+
+  <!-- ============================= -->
+  <!-- CSS: Bootstrap / AOS / Ícones / Estilos do site -->
+  <!-- ============================= -->
+  <!-- Bootstrap 5.3.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- ============================= -->
+  <!-- NAVBAR -->
+  <!-- ============================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/Logo vibrante da MusicBox.png" width="160" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        
+           
+            
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================= -->
+    <!-- BANNER -->
+    <!-- ============================= -->
+    <section class="banner-interno text-white text-center py-5">
+      <div class="container" data-aos="fade-up">
+        <h1>Entre em Contato</h1>
+        <p>Envie sugestões, dúvidas ou parcerias</p>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- CONTEÚDO (form + card de contato/redes) -->
+    <!-- ============================= -->
+    <section class="py-5">
+      <div class="container">
+
+        <div class="row g-4">
+
+          <!-- FORMULÁRIO -->
+          <div class="col-lg-7" data-aos="fade-up">
+            <div class="card shadow">
+              <div class="card-body p-4">
+
+                <h4 class="mb-3">Enviar mensagem</h4>
+
+                <form action="#" method="POST">
+
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Ex: Sugestão de playlist">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fa-solid fa-paper-plane me-2"></i>
+                    Enviar
+                  </button>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTATO / REDES -->
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="card shadow h-100">
+              <div class="card-body p-4">
+
+                <h4 class="mb-3">Contato</h4>
+
+                <p class="mb-3">
+                  <i class="fa-solid fa-envelope me-2"></i>
+                  contato@musicbox.com
+                </p>
+
+                <p class="mb-4">
+                  <i class="fa-solid fa-location-dot me-2"></i>
+                  Brasil
+                </p>
+
+                <hr class="my-4">
+
+                <h5 class="mb-3">Redes sociais</h5>
+
+                <div class="d-flex gap-3 flex-wrap">
+                  <a class="btn-social btn-instagram" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                  </a>
+
+                  <a class="btn-social btn-whatsapp" href="https://wa.me/5512999999999" target="_blank" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- espaço pro player fixo não cobrir conteúdo -->
+        <div style="height:110px;"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= -->
+  <!-- FOOTER -->
+  <!-- ============================= -->
+  <footer class="bg-dark text-white text-center py-4">
+<div class="container">
+<p class="mb-0">© 2026 MusicBox - Todos os direitos reservados</p>
+</div>
+</footer>
+
+  <!-- ============================= -->
+  <!-- PLAYER GLOBAL (fixo) -->
+  <!-- ============================= -->
+  <div class="global-player">
+    <div class="container">
+      <div class="gp-wrap">
+
+        <div id="gpTitle" class="gp-title">
+          Selecione uma música
+        </div>
+
+        <button id="gpPlay" class="gp-play">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <input id="gpSeek" class="gp-seek" type="range" min="0" max="100" value="0">
+
+        <div id="gpTime" class="gp-time">
+          0:00 / 0:00
+        </div>
+
+        <div class="gp-volwrap">
+          <i class="fa-solid fa-volume-low"></i>
+          <input id="gpVol" class="gp-vol" type="range" min="0" max="1" step="0.01" value="0.8">
+        </div>
+
+        <audio id="gpAudio"></audio>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <script src="assets/js/playlists.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>

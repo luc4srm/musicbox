@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- ============================= -->
+<!-- META / SEO -->
+<!-- ============================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Artistas em destaque da MusicBox">
+<title>MusicBox | Artistas</title>
+
+<!-- ============================= -->
+<!-- FAVICON -->
+<!-- ============================= -->
+<link rel="icon" href="assets/img/Logo vibrante da MusicBox (1).png">
+
+<!-- ============================= -->
+<!-- CSS: Bootstrap / AOS / Ícones / Estilos do site -->
+<!-- ============================= -->
+<!-- Bootstrap 5.3.2 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- ============================= -->
+<!-- CSS INLINE (ajustes específicos desta página) -->
+<!-- ============================= -->
+<style>
+
+/* Faz a página ocupar toda a tela */
+body{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* Conteúdo cresce e empurra o footer */
+main{
+flex:1;
+}
+
+/* Footer maior */
+footer{
+margin-top:auto;
+padding:25px 0;
+font-size:16px;
+}
+
+</style>
+
+</head>
+
+<body class="bg-dark text-white">
+
+<!-- ============================= -->
+<!-- NAVBAR -->
+<!-- ============================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+<img src="assets/img/Logo vibrante da MusicBox.png" width="160" alt="">
+<span></span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<main>
+
+<!-- ============================= -->
+<!-- BANNER -->
+<!-- ============================= -->
+<section class="banner-interno text-white text-center py-5">
+<div class="container" data-aos="fade-up">
+<h1>Artistas em Destaque</h1>
+<p>Conheça os nomes que estão dominando as playlists</p>
+</div>
+</section>
+
+<!-- ============================= -->
+<!-- GRID DE ARTISTAS (cards) -->
+<!-- ============================= -->
+<section class="py-5">
+<div class="container">
+<div class="row g-4">
+
+<div class="col-md-4" data-aos="fade-up">
+<div class="card shadow h-100">
+<img src="assets/img/artista1.jpg" class="card-img-top" alt="The Weeknd">
+<div class="card-body text-center">
+<h5 class="card-title">The Weeknd</h5>
+<p class="card-text">Ícone do pop moderno e dono de grandes hits globais.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+<div class="card shadow h-100">
+<img src="assets/img/artista2.jpg" class="card-img-top" alt="Marília Mendonça">
+<div class="card-body text-center">
+<h5 class="card-title">Marília Mendonça</h5>
+<p class="card-text">Referência do sertanejo contemporâneo brasileiro.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+<div class="card shadow h-100">
+<img src="assets/img/artista03.jpg" class="card-img-top" alt="Bruno Mars">
+<div class="card-body text-center">
+<h5 class="card-title">Bruno Mars</h5>
+<p class="card-text">Mistura perfeita de pop, funk e soul.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up">
+<div class="card shadow h-100">
+<img src="assets/img/artista4.jpg" class="card-img-top" alt="Taylor Swift">
+<div class="card-body text-center">
+<h5 class="card-title">Taylor Swift</h5>
+<p class="card-text">Uma das maiores compositoras do pop mundial.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+<div class="card shadow h-100">
+<img src="assets/img/artista5.jpg" class="card-img-top" alt="Drake">
+<div class="card-body text-center">
+<h5 class="card-title">Drake</h5>
+<p class="card-text">Grande nome do hip hop e R&B contemporâneo.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+<div class="card shadow h-100">
+<img src="assets/img/artista06.jpg" class="card-img-top" alt="Dua Lipa">
+<div class="card-body text-center">
+<h5 class="card-title">Dua Lipa</h5>
+<p class="card-text">Referência do pop moderno com hits globais.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- ============================= -->
+<!-- FOOTER -->
+<!-- ============================= -->
+<footer class="bg-dark text-white text-center">
+<div class="container">
+<p class="mb-0">© 2026 MusicBox - Todos os direitos reservados</p>
+</div>
+</footer>
+
+<!-- ============================= -->
+<!-- PLAYER GLOBAL (fixo) -->
+<!-- ============================= -->
+ <!-- ✅ ADICIONADO: PLAYER GLOBAL FIXO (minimalista) -->
+  <div class="global-player" aria-label="Player global MusicBox">
+    <div class="container">
+      <div class="gp-wrap">
+        <button class="gp-play" id="gpPlay" type="button" aria-label="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <div class="gp-title" id="gpTitle">Nenhuma música</div>
+
+        <div class="gp-time" id="gpTime">0:00 / 0:00</div>
+
+        <input class="gp-seek" id="gpSeek" type="range" min="0" max="100" value="0" aria-label="Progresso">
+
+        <div class="gp-volwrap" title="Volume">
+          <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+          <input class="gp-vol" id="gpVol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+        </div>
+
+        <audio id="gpAudio" preload="metadata"></audio>
+      </div>
+    </div>
+  </div>
+
+<!-- ============================= -->
+<!-- SCRIPTS -->
+<!-- ============================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({ duration: 1000, once: true });
+</script>
+
+<script src="assets/js/playlists.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

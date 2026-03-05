@@ -1,0 +1,445 @@
+/* ================================================= */
+/* CONFIGURAÇÃO GLOBAL */
+/* ================================================= */
+
+/* Remove rolagem horizontal (barra inferior) */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Estilo base do site + espaço para o player fixo */
+body {
+  background-color: #0f0f0f;
+  color: #ffffff !important;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+
+  /* espaço para o player fixo */
+  padding-bottom: 70px;
+}
+
+/* Força textos brancos por padrão */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+small,
+a,
+li,
+label {
+  color: #ffffff !important;
+}
+
+/* ================================================= */
+/* NAVBAR */
+/* ================================================= */
+
+.navbar {
+  background-color: #000 !important;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ff0055 !important;
+}
+
+/* ================================================= */
+/* LOGO DO SITE */
+/* ================================================= */
+
+.navbar-brand img {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  transition: 0.3s ease;
+}
+
+/* Logo menor em telas pequenas */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 250px;
+  }
+}
+
+/* ================================================= */
+/* BANNERS INTERNOS */
+/* ================================================= */
+
+.banner-interno {
+  background: linear-gradient(135deg, #ff0055, #6f00ff);
+}
+
+.banner-interno h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.banner-interno p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ================================================= */
+/* CARDS */
+/* (Playlists / Recomendações / Artistas) */
+/* ================================================= */
+
+.card {
+  background-color: #141414 !important;
+  border: none;
+  border-radius: 12px;
+}
+
+.card-title {
+  color: #ff0055 !important;
+  font-weight: bold;
+}
+
+.card-body small {
+  color: #bbbbbb !important;
+}
+
+/* Botão ativo dos filtros (na página de playlists) */
+.filter-btn.active {
+  background-color: #ff0055 !important;
+  border-color: #ff0055 !important;
+  color: #fff !important;
+}
+
+/* ================================================= */
+/* GRID PLAYLISTS */
+/* (Centralização e consistência dos cards) */
+/* ================================================= */
+
+#playlistContainer,
+#spotifyGrid {
+  justify-content: center;
+}
+
+#playlistContainer .card,
+#spotifyGrid .card {
+  height: 100%;
+}
+
+/* Oculta o player padrão (caso exista) dentro do container de playlists */
+#playlistContainer audio {
+  display: none;
+}
+
+/* ================================================= */
+/* FOOTER */
+/* (Tamanho, cor e separação do conteúdo) */
+/* ================================================= */
+
+footer {
+  background-color: #000 !important;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+  margin: 0;
+  color: #aaa !important;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+/* ================================================= */
+/* PLAYER GLOBAL */
+/* (Barra fixa no rodapé) */
+/* ================================================= */
+
+.global-player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+
+  background: #111;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 10px 0;
+}
+
+/* Layout interno do player */
+.gp-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Título/descrição da faixa atual */
+.gp-title {
+  color: #aaa !important;
+  font-size: 0.85rem;
+
+  min-width: 180px;
+  max-width: 320px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tempo do áudio */
+.gp-time {
+  font-size: 0.85rem;
+  color: #aaa !important;
+
+  min-width: 96px;
+  text-align: center;
+}
+
+/* Barra de progresso (seek) */
+.gp-seek {
+  width: 260px;
+  height: 4px;
+  accent-color: #ff4d6d;
+}
+
+/* Volume (aparece mais ao passar o mouse) */
+.gp-volwrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  opacity: 0.35;
+  transition: 0.2s ease;
+}
+
+.gp-wrap:hover .gp-volwrap {
+  opacity: 1;
+}
+
+.gp-vol {
+  width: 110px;
+  height: 4px;
+  accent-color: #ff4d6d;
+}
+
+/* Botão Play/Pause (player global) */
+.gp-play {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background-color: #ff4d6d;
+
+  border: none;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.35);
+}
+
+.gp-play:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255, 77, 109, 0.65);
+}
+
+.gp-play i {
+  pointer-events: none;
+}
+
+/* Responsivo do player global */
+@media (max-width: 768px) {
+  .gp-seek {
+    width: 180px;
+  }
+
+  .gp-vol {
+    width: 85px;
+  }
+
+  .gp-title {
+    min-width: 160px;
+    max-width: 240px;
+  }
+}
+
+/* ================================================= */
+/* BOTÃO PLAY DAS PLAYLISTS */
+/* (Botão circular usado nos cards das faixas) */
+/* ================================================= */
+
+.play-btn {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: #ff4d6d;
+
+  border: none;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.35);
+}
+
+.play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255, 77, 109, 0.65);
+}
+
+.play-btn i {
+  pointer-events: none;
+}
+
+/* ================================================= */
+/* MINI PLAYER */
+/* (Player compacto dentro de cards, se estiver sendo usado) */
+/* ================================================= */
+
+.mini-player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mini-player .time {
+  font-size: 0.85rem;
+  color: #aaa !important;
+  min-width: 86px;
+  text-align: center;
+}
+
+.mini-player .seek {
+  width: 160px;
+  height: 4px;
+  accent-color: #ff4d6d;
+}
+
+.mini-player .vol-ic {
+  color: #aaa !important;
+  font-size: 0.9rem;
+}
+
+.mini-player .vol {
+  width: 95px;
+  height: 4px;
+  accent-color: #ff4d6d;
+}
+
+/* Responsivo do mini player */
+@media (max-width: 576px) {
+  .mini-player .seek {
+    width: 140px;
+  }
+
+  .mini-player .vol {
+    width: 80px;
+  }
+}
+
+/* ================================================= */
+/* FIX TEXTO PRETO (Playlists) */
+/* (Garante contraste quando o body tem bg-dark text-white) */
+/* ================================================= */
+
+body.bg-dark.text-white #playlistContainer,
+body.bg-dark.text-white #spotifyGrid {
+  color: #fff !important;
+}
+
+body.bg-dark.text-white #playlistContainer .card,
+body.bg-dark.text-white #spotifyGrid .card,
+body.bg-dark.text-white #playlistContainer .card *,
+body.bg-dark.text-white #spotifyGrid .card * {
+  color: inherit !important;
+}
+
+body.bg-dark.text-white #playlistContainer .card-title,
+body.bg-dark.text-white #spotifyGrid .card-title {
+  color: #ff0055 !important;
+}
+
+body.bg-dark.text-white #playlistContainer .card-text,
+body.bg-dark.text-white #spotifyGrid .card-text,
+body.bg-dark.text-white #playlistContainer small,
+body.bg-dark.text-white #spotifyGrid small {
+  color: #cfcfcf !important;
+}
+
+body.bg-dark.text-white .text-muted,
+body.bg-dark.text-white .text-dark,
+body.bg-dark.text-white .link-dark {
+  color: #cfcfcf !important;
+}
+
+/* ================================================= */
+/* BOTÕES REDES SOCIAIS */
+/* (Instagram / WhatsApp) */
+/* ================================================= */
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  border-radius: 6px;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+
+  text-decoration: none;
+}
+
+/* Instagram */
+.btn-instagram {
+  border: 1px solid #e1306c;
+  color: #e1306c;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+  border: 1px solid #25d366;
+  color: #25d366;
+}
+
+.btn-whatsapp:hover {
+  background: #25d366;
+  color: #fff;
+  border-color: #25d366;
+}
+/* ============================= */
+/* PADRONIZA O INDEX (mesmo efeito das outras páginas) */
+/* sem precisar colocar bg-dark/text-white no HTML */
+/* ============================= */
+
+body{
+  background-color:#0f0f0f !important;
+  color:#ffffff !important;
+}
