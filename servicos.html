@@ -143,57 +143,28 @@
 <!-- PLAYER GLOBAL (fixo) -->
 <!-- ============================= -->
 <!-- PLAYER GLOBAL -->
-<div class="global-player">
-  <div class="container">
-    <div class="gp-wrap">
+  <div class="global-player" aria-label="Player global MusicBox">
+    <div class="container">
+      <div class="gp-wrap">
+        <button class="gp-play" id="gpPlay" type="button" aria-label="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
 
-      <!-- titulo da musica -->
-      <div id="gpTitle" class="gp-title">
-        Selecione uma música
+        <div class="gp-title" id="gpTitle">Nenhuma música</div>
+
+        <div class="gp-time" id="gpTime">0:00 / 0:00</div>
+
+        <input class="gp-seek" id="gpSeek" type="range" min="0" max="100" value="0" aria-label="Progresso">
+
+        <div class="gp-volwrap" title="Volume">
+          <i class="fa-solid fa-volume-low" aria-hidden="true"></i>
+          <input class="gp-vol" id="gpVol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+        </div>
+
+        <audio id="gpAudio" preload="metadata"></audio>
       </div>
-
-      <!-- botão play -->
-      <button id="gpPlay" class="gp-play">
-        <i class="fa-solid fa-play"></i>
-      </button>
-
-      <!-- barra de progresso -->
-      <input
-        id="gpSeek"
-        class="gp-seek"
-        type="range"
-        min="0"
-        max="100"
-        value="0"
-      >
-
-      <!-- tempo -->
-      <div id="gpTime" class="gp-time">
-        0:00 / 0:00
-      </div>
-
-      <!-- volume -->
-      <div class="gp-volwrap">
-        <i class="fa-solid fa-volume-low"></i>
-
-        <input
-          id="gpVol"
-          class="gp-vol"
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value="0.8"
-        >
-      </div>
-
-      <!-- audio -->
-      <audio id="gpAudio"></audio>
-
     </div>
   </div>
-</div>
-
 <!-- ============================= -->
 <!-- SCRIPTS -->
 <!-- ============================= -->
